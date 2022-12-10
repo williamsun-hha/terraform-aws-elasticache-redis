@@ -76,6 +76,12 @@ variable "transit_encryption_enabled" {
   description = "Whether to enable encryption in transit."
 }
 
+variable "data_tiering_enabled" {
+  default     = true
+  type        = bool
+  description = "Whether to enable data_tiering."
+}
+
 variable "auth_token" {
   type        = string
   description = "The password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`."
