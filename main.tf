@@ -77,6 +77,7 @@ resource "aws_elasticache_replication_group" "default" {
   # You should benchmark your data with and without in-transit encryption to determine the performance impact for your use cases.
   # https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/in-transit-encryption.html
   transit_encryption_enabled = var.transit_encryption_enabled
+  data_tiering_enabled = var.data_tiering_enabled
 
   # If true, this parameter causes the modifications in this request and any pending modifications to be applied,
   # asynchronously and as soon as possible, regardless of the maintenance_window setting for the replication group.
